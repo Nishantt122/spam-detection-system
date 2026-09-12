@@ -4,427 +4,2881 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SpamShield | Spam Detection System</title>
+    <title>SPAMSHIELD AI — Intelligent Threat Detection</title>
+
+    <meta
+        name="description"
+        content="SPAMSHIELD AI — AI-powered spam, phishing and scam threat analysis platform."
+    >
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="logo">
-            🛡️ Spam<span>Shield</span>
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+    <div class="header-inner">
+
+        <button class="brand" id="brandBtn" aria-label="SPAMSHIELD AI Home">
+
+            <span class="brand-mark">
+                <span class="brand-shield">◆</span>
+            </span>
+
+            <span class="brand-text">
+                <strong>SPAMSHIELD</strong>
+                <small>AI THREAT INTELLIGENCE</small>
+            </span>
+
+        </button>
+
+
+        <nav class="main-nav">
+
+            <button class="nav-link active" data-view="home">
+                Overview
+            </button>
+
+            <button class="nav-link" data-view="scanner">
+                AI Analyzer
+            </button>
+
+            <button class="nav-link" data-view="intelligence">
+                Intelligence
+            </button>
+
+            <button class="nav-link" data-view="history">
+                History
+            </button>
+
+            <button class="nav-link" data-view="about">
+                About
+            </button>
+
+        </nav>
+
+
+        <div class="header-status">
+
+            <span class="status-dot"></span>
+
+            <span>AI ENGINE ONLINE</span>
+
         </div>
 
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#detector">Detector</a>
-            <a href="#how">How It Works</a>
-            <a href="#stats">Statistics</a>
-            <a href="#about">About</a>
-        </div>
-    </nav>
+    </div>
+
+</header>
 
 
-    <!-- HERO SECTION -->
-    <section id="home" class="hero">
+<!-- =========================================================
+     MAIN
+========================================================= -->
 
-        <div class="hero-content">
+<main>
 
-            <div class="badge">
-                🛡️ AI-Powered Security
+
+<!-- =========================================================
+     HOME
+========================================================= -->
+
+<section
+    class="app-view active-view"
+    id="view-home"
+>
+
+    <div class="home-container">
+
+        <div class="hero-section">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    <span class="status-dot"></span>
+                    AI-POWERED COMMUNICATION SECURITY
+                </div>
+
+
+                <h1>
+                    Don't trust every
+                    <span>message.</span>
+                </h1>
+
+
+                <p>
+                    SPAMSHIELD AI analyzes suspicious messages,
+                    links and social-engineering patterns using
+                    machine learning and threat intelligence.
+                </p>
+
+
+                <div class="hero-actions">
+
+                    <button
+                        class="btn primary-btn"
+                        id="startScanBtn"
+                    >
+                        Scan a Message
+                        <span>→</span>
+                    </button>
+
+                    <button
+                        class="btn secondary-btn"
+                        id="howItWorksBtn"
+                    >
+                        How it works
+                    </button>
+
+                </div>
+
+
+                <div class="trust-metrics">
+
+                    <div>
+                        <strong>99%+</strong>
+                        <span>AI Accuracy</span>
+                    </div>
+
+                    <div>
+                        <strong>4</strong>
+                        <span>ML Models</span>
+                    </div>
+
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Threat Analysis</span>
+                    </div>
+
+                </div>
+
             </div>
 
-            <h1>
-                Detect Spam.<br>
-                <span>Stay Protected.</span>
-            </h1>
 
-            <p>
-                Analyze suspicious emails and messages using intelligent
-                spam detection technology.
-            </p>
+            <!-- SECURITY MONITOR -->
 
-            <a href="#detector" class="primary-btn">
-                Check a Message →
-            </a>
+            <div class="security-monitor">
+
+                <div class="monitor-header">
+
+                    <span>
+                        LIVE SECURITY MONITOR
+                    </span>
+
+                    <span class="monitor-live">
+                        ● LIVE
+                    </span>
+
+                </div>
+
+
+                <div class="monitor-screen">
+
+                    <div class="monitor-grid"></div>
+
+
+                    <div class="security-shield">
+
+                        <div class="shield-ring"></div>
+
+                        <div class="shield-core">
+                            ✓
+                        </div>
+
+                    </div>
+
+
+                    <div class="scan-line"></div>
+
+
+                    <div class="floating-threat threat-one">
+                        <small>THREAT</small>
+                        <strong>PHISHING</strong>
+                    </div>
+
+
+                    <div class="floating-threat threat-two">
+                        <small>RISK</small>
+                        <strong>92%</strong>
+                    </div>
+
+
+                    <div class="floating-threat threat-three">
+                        <small>ENGINE</small>
+                        <strong>ACTIVE</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="monitor-footer">
+
+                    <span>
+                        Neural analysis active
+                    </span>
+
+                    <span>
+                        Secure
+                    </span>
+
+                </div>
+
+            </div>
 
         </div>
 
-        <div class="hero-card">
 
-            <div class="shield">
-                🛡️
-            </div>
+        <!-- QUICK CARDS -->
 
-            <h3>Spam Detection</h3>
+        <div class="quick-grid">
 
-            <p>
-                Your message is analyzed for suspicious patterns
-                and spam indicators.
-            </p>
+            <button
+                class="quick-card"
+                data-view-target="scanner"
+            >
 
-            <div class="security-status">
-                <span></span>
-                System Online
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- DETECTOR -->
-    <section id="detector" class="section detector-section">
-
-        <div class="section-title">
-            <div class="small-title">SMART DETECTOR</div>
-
-            <h2>Check Your Message</h2>
-
-            <p>
-                Paste an email, SMS or any message below to determine
-                whether it is spam.
-            </p>
-        </div>
-
-
-        <div class="detector-box">
-
-            <div class="input-header">
-                <span>Message Content</span>
-
-                <button id="clearBtn">
-                    Clear
-                </button>
-            </div>
-
-            <textarea
-                id="messageInput"
-                placeholder="Paste your message here...
-
-Example:
-Congratulations! You have won a $1000 prize.
-Click here to claim your reward now!"
-            ></textarea>
-
-
-            <div class="input-footer">
-
-                <span id="charCount">
-                    0 characters
+                <span class="quick-card-icon">
+                    ◈
                 </span>
 
-                <button id="detectBtn" class="detect-btn">
-                    🔍 Detect Spam
-                </button>
+                <span>
+                    <strong>AI Analyzer</strong>
+                    <small>
+                        Analyze any suspicious message
+                    </small>
+                </span>
 
-            </div>
+                <b>→</b>
 
-        </div>
-
-
-        <!-- RESULT -->
-        <div id="resultBox" class="result-box hidden">
-
-            <div id="resultIcon" class="result-icon">
-                🔴
-            </div>
-
-            <div class="result-content">
-
-                <h3 id="resultTitle">
-                    Spam Detected
-                </h3>
-
-                <p id="resultMessage">
-                    This message appears to contain suspicious content.
-                </p>
-
-                <div class="confidence-container">
-
-                    <div class="confidence-label">
-                        <span>Confidence</span>
-                        <strong id="confidence">
-                            0%
-                        </strong>
-                    </div>
-
-                    <div class="progress">
-                        <div id="progressBar"></div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
+            </button>
 
 
-    <!-- HOW IT WORKS -->
-    <section id="how" class="section how-section">
+            <button
+                class="quick-card"
+                data-view-target="intelligence"
+            >
 
-        <div class="section-title">
+                <span class="quick-card-icon">
+                    ◉
+                </span>
 
-            <div class="small-title">
-                PROCESS
-            </div>
+                <span>
+                    <strong>Threat Intelligence</strong>
+                    <small>
+                        Explore detailed detection signals
+                    </small>
+                </span>
 
-            <h2>How It Works</h2>
+                <b>→</b>
 
-            <p>
-                The system follows a simple process to classify messages.
-            </p>
+            </button>
+
+
+            <button
+                class="quick-card"
+                data-view-target="history"
+            >
+
+                <span class="quick-card-icon">
+                    ◷
+                </span>
+
+                <span>
+                    <strong>Scan History</strong>
+                    <small>
+                        Review your previous analyses
+                    </small>
+                </span>
+
+                <b>→</b>
+
+            </button>
 
         </div>
 
+    </div>
 
-        <div class="steps">
+</section>
 
-            <div class="step">
 
-                <div class="step-number">01</div>
+<!-- =========================================================
+     SCANNER
+========================================================= -->
 
-                <div class="step-icon">
-                    📝
-                </div>
+<section
+    class="app-view"
+    id="view-scanner"
+>
 
-                <h3>Enter Message</h3>
+    <div class="page-container">
 
-                <p>
-                    User enters an email, SMS or suspicious message.
-                </p>
-
-            </div>
-
-
-            <div class="arrow">→</div>
-
-
-            <div class="step">
-
-                <div class="step-number">02</div>
-
-                <div class="step-icon">
-                    ⚙️
-                </div>
-
-                <h3>Preprocessing</h3>
-
-                <p>
-                    Text is cleaned and prepared for analysis.
-                </p>
-
-            </div>
-
-
-            <div class="arrow">→</div>
-
-
-            <div class="step">
-
-                <div class="step-number">03</div>
-
-                <div class="step-icon">
-                    🧠
-                </div>
-
-                <h3>ML Analysis</h3>
-
-                <p>
-                    The machine learning model analyzes the message.
-                </p>
-
-            </div>
-
-
-            <div class="arrow">→</div>
-
-
-            <div class="step">
-
-                <div class="step-number">04</div>
-
-                <div class="step-icon">
-                    🛡️
-                </div>
-
-                <h3>Result</h3>
-
-                <p>
-                    The system identifies Spam or Not Spam.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- STATISTICS -->
-    <section id="stats" class="section stats-section">
-
-        <div class="section-title">
-
-            <div class="small-title">
-                SYSTEM OVERVIEW
-            </div>
-
-            <h2>Detection Statistics</h2>
-
-        </div>
-
-
-        <div class="stats-grid">
-
-            <div class="stat-card">
-
-                <div class="stat-icon">
-                    📩
-                </div>
-
-                <h3 id="totalMessages">
-                    0
-                </h3>
-
-                <p>
-                    Messages Checked
-                </p>
-
-            </div>
-
-
-            <div class="stat-card">
-
-                <div class="stat-icon">
-                    🚨
-                </div>
-
-                <h3 id="spamMessages">
-                    0
-                </h3>
-
-                <p>
-                    Spam Detected
-                </p>
-
-            </div>
-
-
-            <div class="stat-card">
-
-                <div class="stat-icon">
-                    ✅
-                </div>
-
-                <h3 id="safeMessages">
-                    0
-                </h3>
-
-                <p>
-                    Safe Messages
-                </p>
-
-            </div>
-
-
-            <div class="stat-card">
-
-                <div class="stat-icon">
-                    🎯
-                </div>
-
-                <h3>
-                    95%
-                </h3>
-
-                <p>
-                    Model Accuracy
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-    <section id="about" class="section about-section">
-
-        <div class="about-content">
+        <div class="page-heading">
 
             <div>
 
-                <div class="small-title">
-                    ABOUT PROJECT
+                <div class="eyebrow">
+                    AI ANALYZER
                 </div>
 
                 <h2>
-                    Fighting Digital Spam
+                    Analyze a suspicious message
                 </h2>
 
                 <p>
-                    SpamShield is a spam detection system designed to
-                    identify unwanted and potentially harmful messages.
-                </p>
-
-                <p>
-                    The system uses Natural Language Processing (NLP)
-                    and Machine Learning techniques to analyze text
-                    and classify it as spam or legitimate.
+                    Send the message to the SPAMSHIELD AI
+                    detection engine for multi-model analysis.
                 </p>
 
             </div>
 
+        </div>
 
-            <div class="tech-box">
 
-                <h3>Technologies Used</h3>
+        <div class="scanner-layout">
 
-                <div class="technologies">
 
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>Python</span>
-                    <span>Flask</span>
-                    <span>Machine Learning</span>
-                    <span>NLP</span>
-                    <span>TF-IDF</span>
+            <!-- ANALYZER CARD -->
+
+            <div class="analyzer-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-kicker">
+                            MESSAGE ANALYSIS
+                        </span>
+
+                        <h3>
+                            What do you want to check?
+                        </h3>
+
+                    </div>
+
+                    <span class="secure-badge">
+                        AI SECURE
+                    </span>
+
+                </div>
+
+
+                <!-- SOURCE -->
+
+                <div class="form-group">
+
+                    <label>
+                        MESSAGE SOURCE
+                    </label>
+
+
+                    <div class="source-grid">
+
+                        <button
+                            class="source-btn active"
+                            data-source="Email"
+                        >
+                            <span>✉</span>
+                            Email
+                        </button>
+
+
+                        <button
+                            class="source-btn"
+                            data-source="SMS"
+                        >
+                            <span>▣</span>
+                            SMS
+                        </button>
+
+
+                        <button
+                            class="source-btn"
+                            data-source="WhatsApp"
+                        >
+                            <span>◉</span>
+                            WhatsApp
+                        </button>
+
+
+                        <button
+                            class="source-btn"
+                            data-source="Social Media"
+                        >
+                            <span>◎</span>
+                            Social Media
+                        </button>
+
+
+                        <button
+                            class="source-btn"
+                            data-source="Other"
+                        >
+                            <span>◇</span>
+                            Other
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SENDER -->
+
+                <div class="form-group">
+
+                    <label for="senderInput">
+                        SENDER / SOURCE
+                    </label>
+
+                    <input
+                        id="senderInput"
+                        type="text"
+                        placeholder="e.g. security@bank.com or +91 XXXXX XXXXX"
+                        maxlength="300"
+                    >
+
+                    <small>
+                        Optional — helps provide source context.
+                    </small>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div class="form-group">
+
+                    <div class="textarea-label">
+
+                        <label for="messageInput">
+                            MESSAGE CONTENT
+                        </label>
+
+                        <span id="charCount">
+                            0 / 20,000
+                        </span>
+
+                    </div>
+
+
+                    <textarea
+                        id="messageInput"
+                        maxlength="20000"
+                        placeholder="Paste the suspicious message here..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- EXAMPLES -->
+
+                <div class="example-row">
+
+                    <span>
+                        Try an example:
+                    </span>
+
+
+                    <button
+                        class="example-btn"
+                        data-example="bank"
+                    >
+                        Bank phishing
+                    </button>
+
+
+                    <button
+                        class="example-btn"
+                        data-example="prize"
+                    >
+                        Prize scam
+                    </button>
+
+
+                    <button
+                        class="example-btn"
+                        data-example="safe"
+                    >
+                        Safe message
+                    </button>
+
+                </div>
+
+
+                <!-- ACTIONS -->
+
+                <div class="hero-actions analyzer-actions">
+
+                    <button
+                        class="btn secondary-btn"
+                        id="clearBtn"
+                    >
+                        Clear
+                    </button>
+
+
+                    <button
+                        class="btn primary-btn"
+                        id="analyzeBtn"
+                    >
+                        Analyze with SPAMSHIELD AI
+                        <span>→</span>
+                    </button>
 
                 </div>
 
             </div>
 
+
+            <!-- ENGINE PANEL -->
+
+            <aside class="engine-panel">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-kicker">
+                            DETECTION ENGINE
+                        </span>
+
+                        <h3>
+                            AI pipeline
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="pipeline">
+
+                    <div class="pipeline-step active">
+
+                        <span>01</span>
+
+                        <div>
+                            <strong>
+                                Message
+                            </strong>
+
+                            <small>
+                                Text input
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="pipeline-line"></div>
+
+
+                    <div class="pipeline-step active">
+
+                        <span>02</span>
+
+                        <div>
+                            <strong>
+                                NLP
+                            </strong>
+
+                            <small>
+                                TF-IDF features
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="pipeline-line"></div>
+
+
+                    <div class="pipeline-step active">
+
+                        <span>03</span>
+
+                        <div>
+                            <strong>
+                                ML Ensemble
+                            </strong>
+
+                            <small>
+                                4 AI models
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="pipeline-line"></div>
+
+
+                    <div class="pipeline-step active">
+
+                        <span>04</span>
+
+                        <div>
+                            <strong>
+                                Threat Intel
+                            </strong>
+
+                            <small>
+                                URLs + signals
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="pipeline-line"></div>
+
+
+                    <div class="pipeline-step active">
+
+                        <span>05</span>
+
+                        <div>
+                            <strong>
+                                Risk Engine
+                            </strong>
+
+                            <small>
+                                0–100 score
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="engine-footer">
+
+                    <span class="status-dot"></span>
+
+                    Ensemble AI ready
+
+                </div>
+
+            </aside>
+
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- FOOTER -->
-    <footer>
+<!-- =========================================================
+     RESULT
+========================================================= -->
 
-        <div class="logo">
-            🛡️ Spam<span>Shield</span>
+<section
+    class="app-view"
+    id="view-result"
+>
+
+    <div class="page-container">
+
+        <div class="page-heading">
+
+            <div>
+
+                <div class="eyebrow">
+                    THREAT ANALYSIS COMPLETE
+                </div>
+
+                <h2 id="resultTitle">
+                    Analysis Result
+                </h2>
+
+                <p id="resultDescription">
+                    SPAMSHIELD AI has completed the analysis.
+                </p>
+
+            </div>
+
         </div>
 
-        <p>
-            Spam Detection System | Academic Project
-        </p>
+
+        <div id="resultCard">
+
+
+            <div class="result-main">
+
+
+                <!-- RISK -->
+
+                <div class="risk-section">
+
+                    <div
+                        id="riskCircle"
+                        class="risk-circle"
+                    >
+
+                        <div>
+
+                            <strong id="riskScore">
+                                0
+                            </strong>
+
+                            <span>
+                                / 100
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <span id="riskSeverity">
+                        SAFE
+                    </span>
+
+                </div>
+
+
+                <!-- RESULT DETAILS -->
+
+                <div class="result-details">
+
+                    <div class="result-status">
+
+                        <span class="status-dot"></span>
+
+                        <strong id="classification">
+                            SAFE
+                        </strong>
+
+                    </div>
+
+
+                    <p>
+                        AI Confidence:
+                        <strong id="confidence">
+                            0%
+                        </strong>
+                    </p>
+
+
+                    <p>
+                        Source:
+                        <strong id="resultSource">
+                            Unknown
+                        </strong>
+                    </p>
+
+
+                    <p>
+                        Signals detected:
+                        <strong id="signalCount">
+                            0
+                        </strong>
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIGNALS -->
+
+            <div class="result-section">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <h3>
+                            Detected Signals
+                        </h3>
+
+                        <p>
+                            Indicators identified by the threat analysis engine.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div id="signalsList">
+                    <div class="empty">
+                        No signals detected.
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- RECOMMENDATION -->
+
+            <div
+                id="recommendationBox"
+                class="recommendation-box"
+            >
+
+                <div>
+
+                    <h3 id="recommendationTitle">
+                        Security Recommendation
+                    </h3>
+
+                    <p id="recommendationText">
+                        Verify unexpected messages before acting.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTIONS -->
+
+            <div class="hero-actions">
+
+                <button
+                    class="btn secondary-btn"
+                    id="newScanBtn"
+                >
+                    ← New Scan
+                </button>
+
+
+                <button
+                    class="btn primary-btn"
+                    id="viewIntelBtn"
+                >
+                    View Deep Intelligence →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTELLIGENCE
+========================================================= -->
+
+<section
+    class="app-view"
+    id="view-intelligence"
+>
+
+    <div class="page-container">
+
+        <div class="page-heading">
+
+            <div>
+
+                <div class="eyebrow">
+                    THREAT INTELLIGENCE
+                </div>
+
+                <h2>
+                    Deep message analysis
+                </h2>
+
+                <p>
+                    Technical signals extracted from the latest scan.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- MESSAGE STATS -->
+
+        <div class="intelligence-grid">
+
+            <div class="intel-stat">
+
+                <span>WORDS</span>
+
+                <strong id="intelWords">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="intel-stat">
+
+                <span>URLs</span>
+
+                <strong id="intelUrls">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="intel-stat">
+
+                <span>DIGITS</span>
+
+                <strong id="intelDigits">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="intel-stat">
+
+                <span>EXCLAMATIONS</span>
+
+                <strong id="intelExclamations">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="intel-panels">
+
+
+            <!-- SUMMARY -->
+
+            <article class="intel-panel">
+
+                <span class="card-kicker">
+                    MESSAGE INTELLIGENCE
+                </span>
+
+                <h3>
+                    AI Summary
+                </h3>
+
+                <p id="intelSummary">
+                    Run a scan to generate intelligence.
+                </p>
+
+            </article>
+
+
+            <!-- SOURCE -->
+
+            <article class="intel-panel">
+
+                <span class="card-kicker">
+                    SOURCE INTELLIGENCE
+                </span>
+
+                <h3>
+                    Source
+                </h3>
+
+                <p id="intelSource">
+                    Unknown
+                </p>
+
+
+                <div
+                    id="intelSender"
+                    class="intel-detail"
+                >
+                    Sender not provided.
+                </div>
+
+
+                <div
+                    id="senderStatus"
+                    class="intel-detail"
+                >
+                    Source context unavailable.
+                </div>
+
+            </article>
+
+
+            <!-- URL -->
+
+            <article class="intel-panel">
+
+                <span class="card-kicker">
+                    URL INTELLIGENCE
+                </span>
+
+                <h3>
+                    Link analysis
+                </h3>
+
+                <div id="urlAnalysis">
+                    No URL intelligence available.
+                </div>
+
+            </article>
+
+
+            <!-- SOCIAL ENGINEERING -->
+
+            <article class="intel-panel">
+
+                <span class="card-kicker">
+                    SOCIAL ENGINEERING
+                </span>
+
+                <h3>
+                    Manipulation signals
+                </h3>
+
+                <div id="socialSignals">
+                    No social-engineering signals available.
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- SECURITY RECOMMENDATION -->
+
+        <div class="recommendation-box">
+
+            <div>
+
+                <h3>
+                    Security Recommendation
+                </h3>
+
+                <p id="intelRecommendation">
+                    Analyze a message to receive a recommendation.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     HISTORY
+========================================================= -->
+
+<section
+    class="app-view"
+    id="view-history"
+>
+
+    <div class="page-container">
+
+        <div class="page-heading">
+
+            <div>
+
+                <div class="eyebrow">
+                    SCAN HISTORY
+                </div>
+
+                <h2>
+                    Previous analyses
+                </h2>
+
+                <p>
+                    Your scan history is stored locally in this browser.
+                </p>
+
+            </div>
+
+
+            <button
+                class="btn secondary-btn"
+                id="clearHistoryBtn"
+            >
+                Clear History
+            </button>
+
+        </div>
+
+
+        <div class="history-card">
+
+            <div class="history-header">
+
+                <div>
+
+                    <strong>
+                        Recent scans
+                    </strong>
+
+                    <span id="historyCount">
+                        0 scans
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-wrap">
+
+                <table class="history-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Date
+                            </th>
+
+                            <th>
+                                Source
+                            </th>
+
+                            <th>
+                                Classification
+                            </th>
+
+                            <th>
+                                Risk
+                            </th>
+
+                            <th>
+                                Confidence
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="historyBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section
+    class="app-view"
+    id="view-about"
+>
+
+    <div class="page-container">
+
+        <div class="page-heading">
+
+            <div>
+
+                <div class="eyebrow">
+                    PLATFORM
+                </div>
+
+                <h2>
+                    About SPAMSHIELD AI
+                </h2>
+
+                <p>
+                    A machine-learning powered communication
+                    security and threat analysis platform.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="architecture">
+
+            <div class="architecture-step">
+
+                <span>01</span>
+
+                <strong>
+                    Message
+                </strong>
+
+                <small>
+                    Email, SMS, WhatsApp,
+                    social media or other text
+                </small>
+
+            </div>
+
+
+            <div class="architecture-step">
+
+                <span>02</span>
+
+                <strong>
+                    NLP Engine
+                </strong>
+
+                <small>
+                    Word and character
+                    TF-IDF features
+                </small>
+
+            </div>
+
+
+            <div class="architecture-step">
+
+                <span>03</span>
+
+                <strong>
+                    ML Ensemble
+                </strong>
+
+                <small>
+                    Naive Bayes, Logistic Regression,
+                    SVM and Random Forest
+                </small>
+
+            </div>
+
+
+            <div class="architecture-step">
+
+                <span>04</span>
+
+                <strong>
+                    Threat Intelligence
+                </strong>
+
+                <small>
+                    URLs, urgency, financial,
+                    credential and impersonation signals
+                </small>
+
+            </div>
+
+
+            <div class="architecture-step">
+
+                <span>05</span>
+
+                <strong>
+                    Risk Engine
+                </strong>
+
+                <small>
+                    Final threat classification
+                    and 0–100 risk score
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="tech-stack">
+
+            <span class="tech-badge">
+                Python
+            </span>
+
+            <span class="tech-badge">
+                Flask
+            </span>
+
+            <span class="tech-badge">
+                Scikit-learn
+            </span>
+
+            <span class="tech-badge">
+                TF-IDF
+            </span>
+
+            <span class="tech-badge">
+                Linear SVM
+            </span>
+
+            <span class="tech-badge">
+                Logistic Regression
+            </span>
+
+            <span class="tech-badge">
+                Random Forest
+            </span>
+
+            <span class="tech-badge">
+                Multinomial NB
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     LOADING
+========================================================= -->
+
+<div
+    id="loadingOverlay"
+    aria-hidden="true"
+>
+
+    <div class="loading-card">
+
+        <div class="loading-spinner"></div>
+
+        <h3>
+            SPAMSHIELD AI is analyzing
+        </h3>
 
         <p>
-            © 2026 SpamShield
+            Running machine-learning and threat-intelligence checks...
         </p>
 
-    </footer>
+    </div>
+
+</div>
 
 
-    <script src="script.js"></script>
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div id="toast"></div>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-brand">
+
+            <strong>
+                SPAMSHIELD AI
+            </strong>
+
+            <span>
+                Intelligent communication security
+            </span>
+
+        </div>
+
+
+        <div class="footer-status">
+
+            <span class="status-dot"></span>
+
+            AI Engine Online
+
+        </div>
+
+
+        <div class="footer-copy">
+
+            © 2026 SPAMSHIELD AI
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+"use strict";
+
+
+/* ============================================================
+   API CONFIGURATION
+============================================================ */
+
+const API_BASE =
+    (
+        location.hostname === "localhost" ||
+        location.hostname === "127.0.0.1"
+    )
+        ? "http://127.0.0.1:5000"
+        : "https://spam-detection-system-tk0i.onrender.com";
+
+const API_URL =
+    `${API_BASE}/predict`;
+
+
+/* ============================================================
+   STATE
+============================================================ */
+
+let selectedSource = "Email";
+
+let latestAnalysis = null;
+
+const HISTORY_KEY =
+    "spamshield_ai_history_v2";
+
+
+/* ============================================================
+   ELEMENTS
+============================================================ */
+
+const navLinks =
+    document.querySelectorAll(
+        ".nav-link"
+    );
+
+const views =
+    document.querySelectorAll(
+        ".app-view"
+    );
+
+const messageInput =
+    document.getElementById(
+        "messageInput"
+    );
+
+const senderInput =
+    document.getElementById(
+        "senderInput"
+    );
+
+const charCount =
+    document.getElementById(
+        "charCount"
+    );
+
+const analyzeBtn =
+    document.getElementById(
+        "analyzeBtn"
+    );
+
+const clearBtn =
+    document.getElementById(
+        "clearBtn"
+    );
+
+const loadingOverlay =
+    document.getElementById(
+        "loadingOverlay"
+    );
+
+const toast =
+    document.getElementById(
+        "toast"
+    );
+
+
+/* ============================================================
+   VIEW NAVIGATION
+============================================================ */
+
+function showView(viewName) {
+
+    views.forEach(
+        view => {
+
+            view.classList.remove(
+                "active-view"
+            );
+
+        }
+    );
+
+
+    const target =
+        document.getElementById(
+            `view-${viewName}`
+        );
+
+
+    if (target) {
+
+        target.classList.add(
+            "active-view"
+        );
+
+    }
+
+
+    navLinks.forEach(
+        link => {
+
+            link.classList.toggle(
+                "active",
+                link.dataset.view === viewName
+            );
+
+        }
+    );
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+
+    if (viewName === "history") {
+
+        renderHistory();
+
+    }
+}
+
+
+/* ============================================================
+   NAVIGATION EVENTS
+============================================================ */
+
+navLinks.forEach(
+    link => {
+
+        link.addEventListener(
+            "click",
+            () => {
+
+                showView(
+                    link.dataset.view
+                );
+
+            }
+        );
+
+    }
+);
+
+
+document
+    .getElementById("brandBtn")
+    .addEventListener(
+        "click",
+        () => showView("home")
+    );
+
+
+document
+    .getElementById("startScanBtn")
+    .addEventListener(
+        "click",
+        () => showView("scanner")
+    );
+
+
+document
+    .getElementById("howItWorksBtn")
+    .addEventListener(
+        "click",
+        () => showView("about")
+    );
+
+
+document
+    .querySelectorAll(
+        "[data-view-target]"
+    )
+    .forEach(
+        card => {
+
+            card.addEventListener(
+                "click",
+                () => {
+
+                    showView(
+                        card.dataset.viewTarget
+                    );
+
+                }
+            );
+
+        }
+    );
+
+
+/* ============================================================
+   SOURCE SELECTION
+============================================================ */
+
+document
+    .querySelectorAll(
+        ".source-btn"
+    )
+    .forEach(
+        button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    document
+                        .querySelectorAll(
+                            ".source-btn"
+                        )
+                        .forEach(
+                            item => {
+
+                                item.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
+
+
+                    button.classList.add(
+                        "active"
+                    );
+
+
+                    selectedSource =
+                        button.dataset.source;
+
+                }
+            );
+
+        }
+    );
+
+
+/* ============================================================
+   CHARACTER COUNT
+============================================================ */
+
+messageInput.addEventListener(
+    "input",
+    updateCharCount
+);
+
+
+function updateCharCount() {
+
+    charCount.textContent =
+        `${messageInput.value.length.toLocaleString()} / 20,000`;
+
+}
+
+
+/* ============================================================
+   EXAMPLES
+============================================================ */
+
+const examples = {
+
+    bank:
+        "URGENT! Your bank account has been suspended. Verify your password and OTP immediately at http://secure-account.xyz/login",
+
+    prize:
+        "CONGRATULATIONS!!! You have WON ₹50,000. Claim your prize NOW by clicking this link! http://bit.ly/free-prize",
+
+    safe:
+        "Hi Rahul, your appointment is confirmed for tomorrow at 10:30 AM. Please bring your documents."
+};
+
+
+document
+    .querySelectorAll(
+        ".example-btn"
+    )
+    .forEach(
+        button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    messageInput.value =
+                        examples[
+                            button.dataset.example
+                        ] || "";
+
+                    updateCharCount();
+
+                    if (
+                        button.dataset.example ===
+                        "bank"
+                    ) {
+
+                        selectedSource =
+                            "WhatsApp";
+
+                    }
+                    else if (
+                        button.dataset.example ===
+                        "prize"
+                    ) {
+
+                        selectedSource =
+                            "SMS";
+
+                    }
+                    else {
+
+                        selectedSource =
+                            "Other";
+
+                    }
+
+
+                    document
+                        .querySelectorAll(
+                            ".source-btn"
+                        )
+                        .forEach(
+                            item => {
+
+                                item.classList.toggle(
+                                    "active",
+                                    item.dataset.source ===
+                                        selectedSource
+                                );
+
+                            }
+                        );
+
+                }
+            );
+
+        }
+    );
+
+
+/* ============================================================
+   CLEAR SCANNER
+============================================================ */
+
+clearBtn.addEventListener(
+    "click",
+    clearScanner
+);
+
+
+function clearScanner() {
+
+    messageInput.value = "";
+
+    senderInput.value = "";
+
+    latestAnalysis = null;
+
+    updateCharCount();
+
+    messageInput.focus();
+
+    showToast(
+        "Analyzer cleared."
+    );
+
+}
+
+
+/* ============================================================
+   LOADING
+============================================================ */
+
+function setLoading(
+    state
+) {
+
+    loadingOverlay.classList.toggle(
+        "show",
+        state
+    );
+
+}
+
+
+/* ============================================================
+   TOAST
+============================================================ */
+
+function showToast(
+    message
+) {
+
+    toast.textContent =
+        message;
+
+    toast.classList.add(
+        "show"
+    );
+
+
+    setTimeout(
+        () => {
+
+            toast.classList.remove(
+                "show"
+            );
+
+        },
+        2600
+    );
+
+}
+
+
+/* ============================================================
+   SAFE HTML
+============================================================ */
+
+function escapeHTML(
+    value
+) {
+
+    return String(
+        value ?? ""
+    )
+        .replaceAll(
+            "&",
+            "&amp;"
+        )
+        .replaceAll(
+            "<",
+            "&lt;"
+        )
+        .replaceAll(
+            ">",
+            "&gt;"
+        )
+        .replaceAll(
+            '"',
+            "&quot;"
+        )
+        .replaceAll(
+            "'",
+            "&#039;"
+        );
+
+}
+
+
+/* ============================================================
+   ANALYZE MESSAGE
+============================================================ */
+
+analyzeBtn.addEventListener(
+    "click",
+    analyzeMessage
+);
+
+
+async function analyzeMessage() {
+
+    const message =
+        messageInput.value.trim();
+
+
+    if (!message) {
+
+        showToast(
+            "Paste a message before analyzing."
+        );
+
+        messageInput.focus();
+
+        return;
+
+    }
+
+
+    if (
+        message.length > 20000
+    ) {
+
+        showToast(
+            "Message exceeds 20,000 characters."
+        );
+
+        return;
+
+    }
+
+
+    setLoading(true);
+
+
+    try {
+
+        const response =
+            await fetch(
+                API_URL,
+                {
+
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body: JSON.stringify({
+
+                        message,
+
+                        source:
+                            selectedSource,
+
+                        sender:
+                            senderInput.value.trim()
+
+                    })
+
+                }
+            );
+
+
+        let data = null;
+
+
+        try {
+
+            data =
+                await response.json();
+
+        }
+        catch {
+
+            throw new Error(
+                "The AI server returned an invalid response."
+            );
+
+        }
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                data.error ||
+                "AI analysis failed."
+            );
+
+        }
+
+
+        latestAnalysis =
+            data;
+
+
+        saveHistory(
+            data,
+            message
+        );
+
+
+        renderResult(
+            data
+        );
+
+
+        renderIntelligence(
+            data,
+            message
+        );
+
+
+        showView(
+            "result"
+        );
+
+
+        showToast(
+            "Analysis complete."
+        );
+
+    }
+    catch (error) {
+
+        console.error(
+            "SPAMSHIELD AI:",
+            error
+        );
+
+
+        showToast(
+            error.message ||
+            "Unable to connect to the AI engine."
+        );
+
+    }
+    finally {
+
+        setLoading(false);
+
+    }
+
+}
+
+
+/* ============================================================
+   RESULT RENDERING
+============================================================ */
+
+function renderResult(
+    data
+) {
+
+    const risk =
+        Number(
+            data.risk_score ?? 0
+        );
+
+
+    const classification =
+        String(
+            data.classification ||
+            (
+                data.result === "spam"
+                    ? "SPAM"
+                    : "SAFE"
+            )
+        )
+            .toUpperCase();
+
+
+    const severity =
+        String(
+            data.severity ||
+            "SAFE"
+        )
+            .toUpperCase();
+
+
+    const confidence =
+        Number(
+            data.confidence ?? 0
+        );
+
+
+    document.getElementById(
+        "riskScore"
+    ).textContent =
+        risk;
+
+
+    document.getElementById(
+        "riskSeverity"
+    ).textContent =
+        severity;
+
+
+    document.getElementById(
+        "classification"
+    ).textContent =
+        classification;
+
+
+    document.getElementById(
+        "confidence"
+    ).textContent =
+        `${confidence.toFixed(2)}%`;
+
+
+    document.getElementById(
+        "resultSource"
+    ).textContent =
+        data.source ||
+        selectedSource ||
+        "Unknown";
+
+
+    document.getElementById(
+        "signalCount"
+    ).textContent =
+        data.signal_count ??
+        (
+            Array.isArray(data.signals)
+                ? data.signals.length
+                : 0
+        );
+
+
+    document.getElementById(
+        "resultTitle"
+    ).textContent =
+        classification === "SAFE"
+            ? "Message appears safe"
+            : `${classification} threat detected`;
+
+
+    document.getElementById(
+        "resultDescription"
+    ).textContent =
+        `SPAMSHIELD AI assigned a ${risk}/100 risk score with ${confidence.toFixed(2)}% model confidence.`;
+
+
+    document.getElementById(
+        "recommendationText"
+    ).textContent =
+        data.recommendation ||
+        "Verify unexpected messages before acting.";
+
+
+    renderSignals(
+        data.signals || []
+    );
+
+
+    const riskCircle =
+        document.getElementById(
+            "riskCircle"
+        );
+
+
+    riskCircle.style.setProperty(
+        "--risk",
+        `${risk}%`
+    );
+
+}
+
+
+/* ============================================================
+   SIGNALS
+============================================================ */
+
+function renderSignals(
+    signals
+) {
+
+    const container =
+        document.getElementById(
+            "signalsList"
+        );
+
+
+    if (
+        !Array.isArray(signals) ||
+        !signals.length
+    ) {
+
+        container.innerHTML = `
+            <div class="empty">
+                <strong>No major threat signals detected.</strong>
+                <br>
+                The message did not trigger the current intelligence rules.
+            </div>
+        `;
+
+        return;
+
+    }
+
+
+    container.innerHTML =
+        signals
+            .map(
+                signal => `
+                    <div class="intel-detail">
+                        <span class="status-dot"></span>
+                        ${escapeHTML(signal)}
+                    </div>
+                `
+            )
+            .join("");
+
+}
+
+
+/* ============================================================
+   INTELLIGENCE RENDERING
+============================================================ */
+
+function renderIntelligence(
+    data,
+    message
+) {
+
+    const features =
+        data.message_features ||
+        {};
+
+
+    const urls =
+        data.urls ||
+        {};
+
+
+    const social =
+        data.social_engineering ||
+        {};
+
+
+    document.getElementById(
+        "intelWords"
+    ).textContent =
+        features.words ?? 0;
+
+
+    document.getElementById(
+        "intelUrls"
+    ).textContent =
+        urls.count ?? 0;
+
+
+    document.getElementById(
+        "intelDigits"
+    ).textContent =
+        features.digits ?? 0;
+
+
+    document.getElementById(
+        "intelExclamations"
+    ).textContent =
+        features.exclamations ?? 0;
+
+
+    /* --------------------------------------------
+       SUMMARY
+    -------------------------------------------- */
+
+    const classification =
+        String(
+            data.classification ||
+            "SAFE"
+        ).toUpperCase();
+
+
+    const risk =
+        Number(
+            data.risk_score ?? 0
+        );
+
+
+    document.getElementById(
+        "intelSummary"
+    ).textContent =
+        `The AI classified this message as ${classification} with a ${risk}/100 risk score. The analysis engine evaluated language patterns, URLs, social-engineering indicators and multiple machine-learning models.`;
+
+
+    /* --------------------------------------------
+       SOURCE
+    -------------------------------------------- */
+
+    document.getElementById(
+        "intelSource"
+    ).textContent =
+        data.source ||
+        "Unknown";
+
+
+    document.getElementById(
+        "intelSender"
+    ).textContent =
+        data.sender
+            ? `Sender provided: ${data.sender}`
+            : "Sender was not provided.";
+
+
+    document.getElementById(
+        "senderStatus"
+    ).textContent =
+        data.sender
+            ? "Sender context recorded for this analysis."
+            : "No sender context was available for this scan.";
+
+
+    /* --------------------------------------------
+       URL INTELLIGENCE
+    -------------------------------------------- */
+
+    let urlHTML = "";
+
+
+    if (
+        urls.count > 0
+    ) {
+
+        urlHTML += `
+            <div class="intel-detail">
+                ${urls.count} URL(s) detected.
+            </div>
+        `;
+
+
+        if (
+            urls.shorteners?.length
+        ) {
+
+            urlHTML += `
+                <div class="intel-detail">
+                    URL shortener:
+                    ${escapeHTML(
+                        urls.shorteners.join(", ")
+                    )}
+                </div>
+            `;
+
+        }
+
+
+        if (
+            urls.risky_tlds?.length
+        ) {
+
+            urlHTML += `
+                <div class="intel-detail">
+                    High-risk extension:
+                    ${escapeHTML(
+                        urls.risky_tlds.join(", ")
+                    )}
+                </div>
+            `;
+
+        }
+
+
+        if (
+            urls.ip_urls?.length
+        ) {
+
+            urlHTML += `
+                <div class="intel-detail">
+                    IP-based URL detected.
+                </div>
+            `;
+
+        }
+
+
+        if (
+            urls.suspicious_structure?.length
+        ) {
+
+            urlHTML += `
+                <div class="intel-detail">
+                    Unusual URL structure detected.
+                </div>
+            `;
+
+        }
+
+
+        if (
+            urls.urls?.length
+        ) {
+
+            urls.urls.forEach(
+                url => {
+
+                    urlHTML += `
+                        <div class="intel-detail">
+                            ${escapeHTML(url)}
+                        </div>
+                    `;
+
+                }
+            );
+
+        }
+
+    }
+    else {
+
+        urlHTML = `
+            <div class="intel-detail">
+                No URLs detected.
+            </div>
+        `;
+
+    }
+
+
+    document.getElementById(
+        "urlAnalysis"
+    ).innerHTML =
+        urlHTML;
+
+
+    /* --------------------------------------------
+       SOCIAL ENGINEERING
+    -------------------------------------------- */
+
+    const socialGroups = [
+
+        [
+            "Urgency",
+            social.urgency
+        ],
+
+        [
+            "Financial",
+            social.financial
+        ],
+
+        [
+            "Credentials / OTP",
+            social.credentials
+        ],
+
+        [
+            "Impersonation",
+            social.impersonation
+        ],
+
+        [
+            "Promotional",
+            social.promotional
+        ]
+
+    ];
+
+
+    let socialHTML = "";
+
+
+    socialGroups.forEach(
+        ([name, values]) => {
+
+            if (
+                Array.isArray(values) &&
+                values.length
+            ) {
+
+                socialHTML += `
+                    <div class="intel-detail">
+                        <strong>
+                            ${escapeHTML(name)}
+                        </strong>
+                        <br>
+                        ${escapeHTML(
+                            values.join(", ")
+                        )}
+                    </div>
+                `;
+
+            }
+
+        }
+    );
+
+
+    if (!socialHTML) {
+
+        socialHTML = `
+            <div class="intel-detail">
+                No major social-engineering pattern detected.
+            </div>
+        `;
+
+    }
+
+
+    document.getElementById(
+        "socialSignals"
+    ).innerHTML =
+        socialHTML;
+
+
+    document.getElementById(
+        "intelRecommendation"
+    ).textContent =
+        data.recommendation ||
+        "Verify unexpected messages before acting.";
+
+}
+
+
+/* ============================================================
+   HISTORY
+============================================================ */
+
+function getHistory() {
+
+    try {
+
+        return JSON.parse(
+            localStorage.getItem(
+                HISTORY_KEY
+            ) || "[]"
+        );
+
+    }
+    catch {
+
+        return [];
+
+    }
+
+}
+
+
+function saveHistory(
+    data,
+    message
+) {
+
+    const history =
+        getHistory();
+
+
+    const entry = {
+
+        id:
+            Date.now(),
+
+        date:
+            new Date().toISOString(),
+
+        source:
+            data.source ||
+            selectedSource,
+
+        classification:
+            data.classification ||
+            data.result,
+
+        risk:
+            Number(
+                data.risk_score ?? 0
+            ),
+
+        confidence:
+            Number(
+                data.confidence ?? 0
+            ),
+
+        message:
+            message,
+
+        recommendation:
+            data.recommendation || "",
+
+        signals:
+            data.signals || []
+
+    };
+
+
+    history.unshift(
+        entry
+    );
+
+
+    const limited =
+        history.slice(
+            0,
+            100
+        );
+
+
+    localStorage.setItem(
+        HISTORY_KEY,
+        JSON.stringify(
+            limited
+        )
+    );
+
+}
+
+
+function renderHistory() {
+
+    const history =
+        getHistory();
+
+
+    const body =
+        document.getElementById(
+            "historyBody"
+        );
+
+
+    const count =
+        document.getElementById(
+            "historyCount"
+        );
+
+
+    count.textContent =
+        `${history.length} ${
+            history.length === 1
+                ? "scan"
+                : "scans"
+        }`;
+
+
+    if (!history.length) {
+
+        body.innerHTML = `
+            <tr>
+                <td colspan="6">
+                    <div class="empty">
+                        <strong>No scans yet.</strong>
+                        <br>
+                        Analyze a message to create your first history entry.
+                    </div>
+                </td>
+            </tr>
+        `;
+
+        return;
+
+    }
+
+
+    body.innerHTML =
+        history
+            .map(
+                item => `
+
+                    <tr>
+
+                        <td>
+                            ${escapeHTML(
+                                new Date(
+                                    item.date
+                                ).toLocaleString()
+                            )}
+                        </td>
+
+
+                        <td>
+                            ${escapeHTML(
+                                item.source
+                            )}
+                        </td>
+
+
+                        <td>
+                            ${escapeHTML(
+                                String(
+                                    item.classification
+                                ).toUpperCase()
+                            )}
+                        </td>
+
+
+                        <td>
+                            ${item.risk}/100
+                        </td>
+
+
+                        <td>
+                            ${Number(
+                                item.confidence
+                            ).toFixed(2)}%
+                        </td>
+
+
+                        <td>
+
+                            <button
+                                class="btn history-view-btn"
+                                data-id="${item.id}"
+                            >
+                                View
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                `
+            )
+            .join("");
+
+
+    body
+        .querySelectorAll(
+            ".history-view-btn"
+        )
+        .forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        const item =
+                            history.find(
+                                entry =>
+                                    String(
+                                        entry.id
+                                    ) ===
+                                    String(
+                                        button.dataset.id
+                                    )
+                            );
+
+
+                        if (!item) {
+                            return;
+                        }
+
+
+                        messageInput.value =
+                            item.message;
+
+
+                        senderInput.value =
+                            "";
+
+
+                        selectedSource =
+                            item.source;
+
+
+                        document
+                            .querySelectorAll(
+                                ".source-btn"
+                            )
+                            .forEach(
+                                sourceBtn => {
+
+                                    sourceBtn.classList.toggle(
+                                        "active",
+                                        sourceBtn.dataset.source ===
+                                            selectedSource
+                                    );
+
+                                }
+                            );
+
+
+                        updateCharCount();
+
+                        showView(
+                            "scanner"
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+}
+
+
+/* ============================================================
+   CLEAR HISTORY
+============================================================ */
+
+document
+    .getElementById(
+        "clearHistoryBtn"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            const history =
+                getHistory();
+
+
+            if (!history.length) {
+
+                showToast(
+                    "History is already empty."
+                );
+
+                return;
+
+            }
+
+
+            localStorage.removeItem(
+                HISTORY_KEY
+            );
+
+
+            renderHistory();
+
+
+            showToast(
+                "Scan history cleared."
+            );
+
+        }
+    );
+
+
+/* ============================================================
+   RESULT BUTTONS
+============================================================ */
+
+document
+    .getElementById(
+        "newScanBtn"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            showView(
+                "scanner"
+            );
+
+        }
+    );
+
+
+document
+    .getElementById(
+        "viewIntelBtn"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            if (!latestAnalysis) {
+
+                showToast(
+                    "Run an analysis first."
+                );
+
+                return;
+
+            }
+
+
+            showView(
+                "intelligence"
+            );
+
+        }
+    );
+
+
+/* ============================================================
+   INITIALIZATION
+============================================================ */
+
+updateCharCount();
+
+renderHistory();
+
+</script>
 
 </body>
 </html>
