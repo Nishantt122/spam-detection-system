@@ -1418,6 +1418,125 @@ def model_info():
 
 
 # ============================================================
+# MODEL BENCHMARK METADATA
+# ============================================================
+
+def normalize_model_metadata(raw_metadata):
+    """
+    Return a frontend-safe representation of model_metadata.json.
+    Training metrics remain the real values produced by train_model.py.
+    """
+    if not isinstance(raw_metadata, dict):
+        return {"models": [], "best_model": None}
+
+    source = (
+        raw_metadata.get("models")
+        or raw_metadata.get("model_metrics")
+        or raw_metadata.get("benchmark")
+        or raw_metadata.get("results")
+        or raw_metadata.get("metrics")
+        or {}
+    )
+
+    models = []
+
+    if isinstance(source, list):
+        for index, item in enumerate(source):
+            if not isinstance(item, dict):
+                continue
+
+            models.append({
+                "name": (
+                    item.get("model")
+                    or item.get("name")
+                    or item.get("model_name")
+                    or f"Model {index + 1}"
+                ),
+                "accuracy": item.get("accuracy", item.get("Accuracy")),
+                "precision": item.get("precision", item.get("Precision")),
+                "recall": item.get("recall", item.get("Recall")),
+                "f1": (
+                    item.get("f1")
+                    if item.get("f1") is not None
+                    else item.get("f1_score")
+                    if item.get("f1_score") is not None
+                    else item.get("F1")
+                    if item.get("F1") is not None
+                    else item.get("F1_score")
+                )
+            })
+
+    elif isinstance(source, dict):
+        for name, item in source.items():
+            if not isinstance(item, dict):
+                continue
+
+            models.append({
+                "name": str(name),
+                "accuracy": item.get("accuracy", item.get("Accuracy")),
+                "precision": item.get("precision", item.get("Precision")),
+                "recall": item.get("recall", item.get("Recall")),
+                "f1": (
+                    item.get("f1")
+                    if item.get("f1") is not None
+                    else item.get("f1_score")
+                    if item.get("f1_score") is not None
+                    else item.get("F1")
+                    if item.get("F1") is not None
+                    else item.get("F1_score")
+                )
+            })
+
+    best_model = (
+        raw_metadata.get("best_model")
+        or raw_metadata.get("best_model_name")
+        or raw_metadata.get("selected_model")
+    )
+
+    if best_model is None:
+        for item in models:
+            if item.get("best") is True or item.get("selected") is True:
+                best_model = item["name"]
+                break
+
+    result = dict(raw_metadata)
+    result["models"] = models
+    result["best_model"] = best_model
+    result.setdefault("platform", "SPAMSHIELD AI")
+    result.setdefault("engine", ENGINE_MODE)
+
+    if isinstance(bundle, dict):
+        result.setdefault(
+            "model_version",
+            bundle.get("version", "SPAMSHIELD-AI-1.0")
+        )
+    else:
+        result.setdefault("model_version", "legacy")
+
+    return result
+
+
+@app.route("/model-metadata", methods=["GET"])
+def model_metadata():
+    """
+    Read-only endpoint for the SPAMSHIELD AI Model Center.
+
+    The endpoint exposes training/benchmark metadata only. It does not
+    expose model pickle contents or other private server files.
+    """
+    if not metadata:
+        return jsonify({
+            "error": (
+                "Model metadata is unavailable. "
+                "Run train_model.py first."
+            ),
+            "engine": ENGINE_MODE
+        }), 503
+
+    return jsonify(normalize_model_metadata(metadata))
+
+
+# ============================================================
 # MAIN PREDICTION API
 # ============================================================
 
